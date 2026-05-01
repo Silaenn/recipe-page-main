@@ -1,6 +1,6 @@
 # Simple Omelette Recipe - Frontend Mentor Challenge
 
-![Frontend-Mentor-Recipe-page](https://github.com/Silaenn/recipe-page-main/assets/131638765/bd31f708-a292-493e-8662-f07d85f20206)
+<img width="1920" height="1687" alt="Frontend-Mentor-Recipe-page" src="https://github.com/user-attachments/assets/2772add6-1e99-40cd-bdc1-0433e503f2c9" />
 
 Selamat datang di repositori solusi tantangan **Recipe Page** dari Frontend Mentor! Proyek ini dirancang sebagai halaman resep masakan yang informatif, menarik secara visual, dan sepenuhnya responsif.
 
