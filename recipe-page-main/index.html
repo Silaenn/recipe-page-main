@@ -13,7 +13,6 @@
       :root {
         --white: hsl(0, 0%, 100%);
         --stone-100: hsl(30, 54%, 90%);
-        --stone-150: hsl(30, 18%, 87%);
         --stone-600: hsl(30, 10%, 34%);
         --stone-900: hsl(24, 5%, 18%);
         --brown-800: hsl(14, 45%, 36%);
@@ -30,7 +29,7 @@
         justify-content: center;
       }
 
-      .container {
+      main {
         background-color: var(--white);
         width: 100%;
         max-width: 600px;
@@ -53,17 +52,23 @@
       h1 { font-size: 32px; }
       h2 { color: var(--brown-800); font-size: 24px; }
 
+      a:focus, button:focus, li:focus {
+        outline: 2px solid var(--brown-800);
+        outline-offset: 2px;
+      }
+
       p {
         color: var(--stone-600);
         line-height: 1.6;
         margin-bottom: 20px;
       }
 
+      section { margin-bottom: 25px; }
+
       .preparation {
         background-color: var(--rose-50);
         padding: 20px;
         border-radius: 10px;
-        margin-bottom: 20px;
       }
 
       .preparation h3 {
@@ -90,6 +95,11 @@
         margin-bottom: 10px;
         color: var(--stone-600);
         padding-left: 10px;
+        transition: color 0.2s;
+      }
+
+      .ingredients li:hover, .instructions li:hover {
+        color: var(--stone-900);
       }
 
       .nutri {
@@ -107,15 +117,21 @@
         font-weight: bold;
       }
 
+      @media print {
+        body { background-color: var(--white); padding: 0; }
+        main { box-shadow: none; padding: 0; }
+        .img-resep { display: none; }
+      }
+
       @media (min-width: 768px) {
         body { padding: 80px 20px; }
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <main>
       <div class="img-resep">
-        <img src="assets/images/image-omelette.jpeg" alt="Omelette" />
+        <img src="assets/images/image-omelette.jpeg" alt="A perfectly cooked golden-brown omelette on a plate" loading="lazy" />
       </div>
 
       <h1>Simple Omelette Recipe</h1>
@@ -126,16 +142,16 @@
         choice of cheese, vegetables, or meats.
       </p>
 
-      <div class="preparation">
+      <section class="preparation">
         <h3>Preparation time</h3>
         <ul>
           <li><strong>Total:</strong> Approximately 10 minutes</li>
           <li><strong>Preparation:</strong> 5 minutes</li>
           <li><strong>Cooking:</strong> 5 minutes</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="ingredients">
+      <section class="ingredients">
         <h2>Ingredients</h2>
         <ul>
           <li>2-3 large eggs</li>
@@ -144,9 +160,9 @@
           <li>1 tablespoon of butter or oil</li>
           <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="instructions">
+      <section class="instructions">
         <h2>Instructions</h2>
         <ol>
           <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed.</li>
@@ -156,9 +172,9 @@
           <li><strong>Fold and serve:</strong> Carefully fold it over and slide onto a plate.</li>
           <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
         </ol>
-      </div>
+      </section>
 
-      <div class="Nutrition">
+      <section class="Nutrition">
         <h2>Nutrition</h2>
         <p>The table below shows nutritional values per serving without the additional fillings.</p>
         <table class="nutri">
@@ -167,7 +183,8 @@
           <tr><td>Protein</td><td>20g</td></tr>
           <tr><td>Fat</td><td>22g</td></tr>
         </table>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
+
 </html>
